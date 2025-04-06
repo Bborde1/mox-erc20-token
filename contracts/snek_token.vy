@@ -7,6 +7,7 @@
 """
 
 from ethereum.ercs import IERC20
+
 implements: IERC20
 
 from snekmate.auth import ownable as ow
@@ -15,9 +16,7 @@ from snekmate.tokens import erc20
 initializes: ow
 initializes: erc20[ownable := ow]
 
-exports: (
-    erc20.__interface__
-)
+exports: erc20.__interface__
 
 NAME: constant(String[25]) = "snek_token"
 SYMBOL: constant(String[5]) = "SNEK"
