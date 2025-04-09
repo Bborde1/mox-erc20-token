@@ -1,7 +1,5 @@
 from hypothesis.stateful import RuleBasedStateMachine, rule
-import pytest
 from contracts.sub_lesson import stateful_fuzz_solvable
-from hypothesis import given, HealthCheck, settings
 from boa.test.strategies import strategy
 
 
